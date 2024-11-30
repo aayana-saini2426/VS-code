@@ -1,0 +1,26 @@
+body {
+    text-decoration: dotted;
+    text-decoration-color:darksalmon;
+    text-align: center;
+    color:crimson;
+    background-color: beige;
+}
+
+.class1 {
+    text-shadow: black;
+    text-align: left;
+    color:mediumpurple;
+    background-size: contain;
+    background-color: azure;
+
+}
+#mid text{
+    size: 67px;
+    color: deeppink;
+    text-align: center;
+
+}
+
+*{
+    font-family: fantasy;
+}
