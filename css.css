@@ -4,6 +4,7 @@ body {
     text-align: center;
     color:crimson;
     background-color: beige;
+    ;
 }
 
 .class1 {
@@ -12,12 +13,14 @@ body {
     color:mediumpurple;
     background-size: contain;
     background-color: azure;
+    text-decoration-line: underline;
 
 }
 #mid text{
     size: 67px;
     color: deeppink;
     text-align: center;
+    background-color: beige;
 
 }
 
