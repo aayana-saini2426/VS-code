@@ -1,0 +1,32 @@
+body{ 
+    text-align: center;
+}
+h1{ 
+    color: darkviolet;
+    font-weight: bold;
+}
+ul >li{
+    color: darkorange;
+    font-size: medium;
+    font-style: normal;
+}
+ul :nth-child(3) { 
+    color: rgb(153, 226, 43);
+}
+h1+p {
+    text-decoration: underline;
+}
+a :hover { 
+    color:coral
+}
+ul li::after {
+    content: "☻"
+}
+
+p::first-letter { 
+    font-size: 200%;
+}
+
+p:not(:first-of-type){
+    color: rgb(43, 226, 98);
+}
