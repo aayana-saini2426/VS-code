@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        div{
+            right:30px ;
+            top: 50px;
+                    border: 3px solid blue;
+                    background-color: brown;
+                    opacity: 0.1;
+        }
+       
+        div.relative{
+            position: absolute;
+            border: 4px rgb(0, 225, 255) dashed;
+            left: 5px;
+             background-color: rgb(42, 116, 165);
+                    opacity: 0.5;
+        }
+          
+
+        
+        
+         div.absolute{
+            position: absolute;
+            border: 4px red dashed;
+             background-color: rgb(165, 42, 93);
+                  
+         }
+          
+         div.fixed{
+            position: fixed;
+            border: 4px rgb(234, 255, 0) dashed;
+            
+        }
+        div.sticky{
+            position: sticky;
+            border: 4px rgb(255, 0, 174) dashed;
+            top: 1px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div> Hello.Default text</div>
+    
+    <div class="relative"> This is relative text
+    <div class="absolute"> This is absolute text</div></div>
+    <div class="fixed"> This is fixed text</div>
+    
+    <div class="sticky"> This is sticky text</div>
+
+</body>
+</html>
