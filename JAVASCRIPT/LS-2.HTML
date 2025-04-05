@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>FUNCTION</title>
+</head>
+<body>
+    <p> local parameter</p>
+    <button type="button" onclick="fun1()"> parameter button </button>    
+   
+    <p id="d1">
+    </p>
+    <p id="d2"></p>
+         <button onclick="fun1(20)"> Button</button>
+    <script>
+        var n1=10
+      
+        function fun1 (x,y)
+        {
+            var n2=5
+            sum=n1+n2
+            document.getElementById("d1").innerHTML= "sum is:" + sum; 
+           // if (y===undefined)
+        // {y=2;}
+         // document.write(x+y)
+         }
+    </script>
+
+
+</body>
+</html>
