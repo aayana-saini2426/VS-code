@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+   
+
+    <h1>
+        TEST methods
+    </h1>
+
+
+
+
+    <button onclick="f1()"> search word-hi </button>
+    <p id="id1">
+
+
+    </p>
+    <script>
+        var friends= ["aayana","krishna" , "charvi" , "vansh" ] ; 
+        for (i= 0; i < friends.length; i++) {
+            var text= friends[i] + "<br>"; 
+            document.write (text) ; 
+            
+         }
+
+        function f1(){ 
+
+            var str = "hi, this is codingal";
+            var p = new RegExp("hi")
+            var r = p.test(str);
+            document.getElementById("id1").innerHTML = r;
+        }
+
+
+    </script>
+</body>
+
+</html>
