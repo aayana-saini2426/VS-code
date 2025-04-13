@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>
+        TEST methods
+    </h1>
+
+
+
+
+    <button onclick="f1()"> search word-hi </button>
+    <p id="id1">
+
+
+    </p>
+    <script>
+        var Bookstore = ["Six of crows", "Shadow and Bone", "You've Reached Sam", "One of us is Lying"];
+        for (i = 0; i < Bookstore.length; i++) {
+            var text = Bookstore[i] + "<br>";
+            document.write(text);
+
+        }
+
+        function f1() {
+
+            var str = "hi, its Oxford Bookstore";
+            var p = new RegExp("hi")
+            var r = p.test(str);
+            document.getElementById("id1").innerHTML = r;
+        }
+
+
+    </script>
+</body>
+
+</html>
