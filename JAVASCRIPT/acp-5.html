@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Afterclass Project </h1>
+    <p id="j1"> </p>
+    <p id="j2"> </p>
+    <p id="j3"> </p>
+    <p id="d1"> </p>
+    <script>
+
+
+        var book = {
+            name: "Powerless", written_in: 2022 , genre: "fantasy"
+        }
+        document.write(book.name, "<br>", book.written_in, "<br>", book.genre, "<br>") 
+
+         
+  
+    
+      var authors=["Lauren Asher", "Holly Jackson", "Jennifer Lynn Barnes", "Dustin Thao"]
+     document.getElementById("j1").innerHTML= authors.join (" ")
+      authors.pop()
+
+     document.getElementById("j2").innerHTML = authors
+
+        authors.pop()
+     document.getElementById("j3").innerHTML = authors
+
+       function add(a, b) { return a + b }
+
+        function average(a, b) { return ((a + b) / 2) }
+
+        let result = average(120, 80)
+        document.getElementById("d1").innerHTML = result 
+
+       
+       
+
+    </script>
+</body>
+
+</html>
