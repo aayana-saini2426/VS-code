@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+        OBJECTS
+    </title>
+</head>
+
+<body>
+
+
+
+
+
+    <p> lets find the largest number </p>
+    <p id="ans">
+
+    </p>
+    <script>
+        function maxfun() {
+            var m = 0
+            for (i = 0; i < arguments.length; i++) {
+                if (arguments[i] > m) {
+                    m = arguments[i]
+                }
+
+            }
+            return m;
+        }
+
+
+        document.getElementById("ans").innerHTML = maxfun(78,9,24,32)
+
+    </script>
+
+</body>
