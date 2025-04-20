@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="f1()"> Click here</button>
+    <p id="time"></p>
+    <p id="result"> </p>
+
+    <script>
+        function f1(){
+
+       
+        var msg; 
+        var t= new Date().getHours()
+        if (t<10){
+            msg="good morning all"
+        }
+       
+        else if (t <20) {
+                msg = "good day all"
+            }
+             else {
+            msg = "good evening all"
+        }
+        
+        document.getElementById("result").innerHTML=msg
+
+        
+
+        
+        }
+
+
+
+    </script>
+</body>
+</html>
