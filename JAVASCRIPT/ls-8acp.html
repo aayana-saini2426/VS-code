@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+</head>
+
+<body>
+    <p id="r1"></p>
+    <p id="r2"></p>
+    <script>
+        class book  {
+            constructor(author) {
+
+                this.author = author
+            }
+
+            fav() {
+                return "my fav book is:  " + this.author 
+
+
+            }
+        }
+
+        class book1 extends book {
+            constructor(author, book) {
+                super(author)
+
+                this.book = book
+            }
+            show() {
+                return this.fav() + "author " + this.author
+
+            }
+
+            static intro(obj) {
+                return "welcome"  +  obj.author
+            }
+        }
+
+
+
+        obook1 = new book1("Powerless", "Lauren Roberts")
+        obook2 = new book1("Once Upon A Broken Heart", "Stephanie Garbers")
+          document.getElementById("r1").innerHTML = obook1.show()
+            document.getElementById("r2").innerHTML = car1.book1(ocar2)
+
+        </script>
+        
+        </body>
+        
+        </html>
