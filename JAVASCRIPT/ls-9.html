@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="t">
+
+  </p>  
+
+  <button onclick="f1()"> SORT</button>
+<button onclick=" f2()"> REVERSE</button>
+<p id="r"> </p>
+
+<script> 
+    var f= ["aayana","krishna", "charvi","vansh"]
+    document.getElementById("t").innerHTML=("the original text:" + f)
+    function f1(){
+        f.sort()
+        document.getElementById("r").innerHTML= "sorted array:" + f
+    }
+     function f2() {
+            f.reverse()
+            document.getElementById("r").innerHTML = "reversed array:" + f
+        }
+</script>
+</body>
+</html>
