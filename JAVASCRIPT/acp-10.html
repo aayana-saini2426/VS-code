@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg"> </p>
+  
+ 
+    <script>
+
+        m = (x, y) => x * y
+        d = (x, y) => x / y
+
+
+        try {
+            alertmsg(
+                "error occureed"
+            )
+        }
+        
+        
+        catch (error) { document.getElementById("msg").innerHTML = error.message } 
+    document.getElementById("msg").innerHTML = m
+
+    
+    </script>
+</body>
+</html>
