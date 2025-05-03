@@ -7,7 +7,15 @@
 </head>
 <body>
     <p id="msg">  </p >
+    <p id="ak1"> </p>
+    <p id="ak2"> </p>
+
     <script> 
+
+    m=(x,y) => x*y 
+    d = (x,y) => x/y 
+
+
         try{ 
             alertmsg (
                 "error occureed"
@@ -15,6 +23,8 @@
         }
         catch(error) 
                 { document.getElementById("msg").innerHTML=error.message} 
+                document.getElementById("ak1").innerHTML=m(10,10 )
+                     document.getElementById("ak2").innerHTML = d(24,26)
     </script>
     </body>
 </html>
