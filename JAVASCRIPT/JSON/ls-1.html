@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Convert JS Objects </h1>
+    <p id="result"></p>
+
+    <script> 
+        var obj={ stud:"Aayana", place:"delhi"}
+        var json=JSON.stringify(obj);
+        var newobj=JSON.parse(json);
+        document.getElementById("result").innerHTML=newobj.place;
+
+        
+    </script>
+</body>
+</html>
