@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> Enter any number from 1-100</p>
+    <input id="id1" type="number" min="1" max="20" required>
+    <button onclick="f1()"> button </button>
+    <p id="r">
+
+    </p>
+
+    <script>
+        function f1() {
+            var input = document.getElementById("id1")
+            if (!input.checkvalidity()) {
+                document.getElementById("r").innerHTML = input.validationMessage;
+            }
+
+            else {
+                document.getElementById("r").innerHTML = "Done"
+            }
+
+
+        }
+
+    </script>
+</body>
