@@ -1,0 +1,17 @@
+.m-heading {
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    background-color: #93B18A;
+}
+
+body {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    color: #ffffff ;
+
+    background-color: #93B18A;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
