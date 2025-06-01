@@ -14,4 +14,18 @@ body {
     background-color: #93B18A;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    
 }
+#social-media {
+
+    margin-top: 30px;
+
+}
+
+#social-media a {
+
+    min-width: 150px;
+
+    margin: 10px;
+
+    font-size: 1.1rem;   }
