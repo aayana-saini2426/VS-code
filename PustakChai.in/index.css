@@ -1,31 +1,108 @@
-.m-heading {
-    font-family: 'Open Sans';
-    font-weight: bolder;
-    background-color: #93B18A;
+/* Global Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
-    color: #ffffff ;
-
-    background-color: #93B18A;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    
+    background-color: #93B18A;
+    color: #000000;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    color: #93B18A;
+    background-color: #ffffff;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #f8f8f8;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.btn:hover::before {
+    width: 0;
+    height: 0;
+}
+
+/* Social Media Icons */
 #social-media {
-
     margin-top: 30px;
-
 }
 
 #social-media a {
-
-    min-width: 150px;
-
+    display: inline-block;
+    width: 50px;
+    height: 50px;
     margin: 10px;
+    font-size: 1.5rem;
+    color: #000000;
+    background-color: #e4e4e4;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    font-size: 1.1rem;   }
+#social-media a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Accessibility Options */
+#accessOptions {
+    display: none;
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#accessOptions ul {
+    list-style-type: none;
+}
+
+#accessOptions li {
+    margin: 10px 0;
+}

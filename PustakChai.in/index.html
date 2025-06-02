@@ -26,7 +26,7 @@
 
     <!-- Custom CSS -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
 
 </head>
 
@@ -62,6 +62,9 @@
                 <li class="nav-item"><a class="nav-link" href="#register-library-card">Register Library Card</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#feedbacks">Feedbacks</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
 
             </ul>
 
@@ -83,90 +86,678 @@
 
     <center>
 
-        <section id="about">
-
-            <h6> Welcome to PustakChai, where every page is a journey and every cup of chai tells a story. Born from the
-                belief
-
-                that a truly Viksit Bharat begins with curious minds and open books, our book café is more than just a
-                space —
-
-                it's a
-
-                movement. In a world full of screens, we bring back the joy of flipping pages, sharing stories, and
-                sipping
-
-                soulful tea. <br>
-
-                Rooted in Indian culture, yet open to global ideas, we offer a cozy adda where Hindi classics sit next
-                to
-
-                English
-
-                bestsellers, where children discover Amar Chitra Katha and youth find the power of Abdul Kalam's words.
-                Whether
-
-                you're a
-
-                student preparing for your dreams, a senior revisiting forgotten tales, or simply a chai lover with a
-                love for
-
-                learning
-
-                — there's a corner here just for you.<br>
-
-                With community reading events, skill-building book shelves, regional language
-
-                collections, and youth-led storytelling clubs, we are building a Bharat that reads, reflects, and rises.
-
-                PustakChai is your space — to pause, ponder, and power up with stories.
-
-                Because when India reads, India leads.</h6>
-
-            <img src="bookcafé.gif" height="300px" width="300px">
-
-            <br>
-
-            <br>
-
+        <section id="about" class="container my-5">
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-md-7">
+                    <h2 class="mb-4">Welcome to PustakChai</h2>
+                    <p class="lead" style="font-size: 1.15rem; line-height: 1.6; color: #4b4b4b;">
+                        Where every page is a journey and every cup of chai tells a story. Born from the belief that a truly
+                        <strong>Viksit Bharat</strong> begins with curious minds and open books, our book café is more than just
+                        a space — it’s a movement.
+                    </p>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        In a world full of screens, we bring back the joy of flipping pages, sharing stories, and sipping
+                        soulful tea. Rooted in Indian culture, yet open to global ideas, we offer a cozy adda where Hindi
+                        classics sit next to English bestsellers, where children discover Amar Chitra Katha, and youth find the
+                        power of Abdul Kalam’s words.
+                    </p>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        Whether you’re a student preparing for your dreams, a senior revisiting forgotten tales, or simply a
+                        chai lover with a love for learning — there’s a corner here just for you.
+                    </p>
+                    <p style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        With community reading events, skill-building book shelves, regional language collections, and youth-led
+                        storytelling clubs, we are building a Bharat that reads, reflects, and rises.
+                        <strong>PustakChai</strong> is your space — to pause, ponder, and power up with stories. Because when
+                        India reads, India leads.
+                    </p>
+                </div>
+        
+                <!-- Image -->
+                <div class="col-md-5 text-center mt-4 mt-md-0">
+                    <img src="bookcafé.gif" alt="PustakChai Book Cafe" class="img-fluid rounded shadow"
+                        style="max-height: 300px; object-fit: contain;">
+                </div>
+            </div>
         </section>
 
-        <section id="Social-Media">
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+        <br> 
+          
+       <section id="Social-Media" class="text-center my-5">
+    <h2 class="mb-4">Follow Us on Social Media</h2>
 
-            <h2>Follow Us on Social Media</h2>
+    <div class="social-media-icons d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://www.facebook.com" target="_blank" class="btn btn-primary social-btn" id="facebook">
+            <i class="fab fa-facebook-f me-2"></i> Facebook
+            
+        </a>
+        <img src="fb.jpg" height="50px" width="50px" style="border-radius: 50%;">
+        <a href="https://www.instagram.com" target="_blank" class="btn btn-danger social-btn" id="instagram">
+            <i class="fab fa-instagram me-2"></i> Instagram
 
-            <div class="social-media-icons">
+                   </a>
+                <img src="insta.jpg" height="50px" width="50px" style="border-radius: 50%;">
+    </div>
+</section>
 
-                <center>
+<style>
+    #Social-Media .social-btn {
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 0.65rem 1.5rem;
+        border-radius: 50px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
+        display: inline-flex;
+        align-items: center;
+    }
 
-                    <a href="https://www.facebook.com" target="_blank" class="btn btn-primary" id="facebook">
+    #Social-Media .social-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgb(0 0 0 / 0.25);
+        text-decoration: none;
+    }
 
-                        <i class="fab fa-facebook-f"></i> Facebook </a>
-
-                    <br>
-
-                    <br>
-
-                    <a href="https://www.instagram.com" target="_blank" class="btn btn-danger" id="instagram">
-
-                        <i class="fab fa-instagram"></i> Instagram </a>
-
-                </center>
-
+    /* Optional: Adjust icon spacing if needed */
+    #Social-Media i {
+        font-size: 1.2rem;
+    }
+</style>
+          
             </div>
 
     </center>
-<section id="make-a-booking"> 
-    <input type="checkbox"> Include E-books 
-    <br> 
-    <input type="checkbox"> Include meal (                   available sizes-Small, Medium, Large  *prices will vary* )
-    <br> 
-    <input type="checkbox"> Include Membership (10% off on purchase of yearly membership)
-    <br> 
+    <section id="make-a-booking" class="container my-5">
+        <h2 class="text-center mb-4">📖 Book A Table at PustakChai</h2>
     
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="date" class="form-control" id="date" placeholder="Date*" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="time" class="form-control" id="time" placeholder="Time*" required>
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" id="people" placeholder="Number of people" min="1" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="tel" class="form-control" id="mobile" placeholder="Enter mobile number*" required>
+                </div>
+            </div>
+    
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="name" placeholder="Name*" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="message" placeholder="Message (if any)">
+                </div>
+            </div>
+    
+            <hr>
+    
+            <h5 class="mb-3">Additional Options</h5>
+    
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="ebooks" onchange="calculateBill()">
+                <label class="form-check-label" for="ebooks">Include E-books (Free)</label>
+            </div>
+    
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="meal" onchange="calculateBill()">
+                <label class="form-check-label" for="meal">Include Meal (₹150)</label>
+            </div>
+    
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="membership" onchange="calculateBill()">
+                <label class="form-check-label" for="membership">Include Membership (₹549 with 10% off = ₹499)</label>
+            </div>
+    
+            <div class="mb-4">
+                <h5>Total Bill: ₹<span id="bill">200</span></h5>
+                <small style="color: #000000;">*Base booking cost is ₹200</small>
+            </div>
+    
+            <button type="button" class="btn btn-success" onclick="confirmBooking()">✅ Book My Spot</button>
+        </form>
+    
+        <div id="confirmationMessage" class="alert alert-info mt-4" style="display: none;">
+            ✅ Your booking is done! Thank you for choosing PustakChai.
+        </div>
+    </section>
+    
+    <script>
+        function calculateBill() {
+            let baseCost = 200;
+            let mealCost = 150;
+            let membershipCost = 499;
 
-    <input type="input-text">
+            let total = baseCost;
+
+            if (document.getElementById("meal").checked) {
+                total += mealCost;
+            }
+
+            if (document.getElementById("membership").checked) {
+                total += membershipCost;
+            }
+
+            document.getElementById("bill").innerText = total;
+        }
+
+        function confirmBooking() {
+            // You can later validate input fields here if needed
+            document.getElementById("confirmationMessage").style.display = "block";
+            window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+        }
+    </script>
+
+<section id="register-library-card" class="container my-5">
+    <h2 class="text-center mb-4">📚 Register for a Library Card</h2>
+
+    <form>
+        <div class="form-group">
+            <label for="libName">Name*</label>
+            <input type="text" class="form-control" id="libName" required placeholder="Enter your full name">
+        </div>
+
+        <div class="form-group">
+            <label for="libAge">Age*</label>
+            <input type="number" class="form-control" id="libAge" required min="1" onchange="calculateCardCost()" placeholder="Enter your age">
+        </div>
+
+        <div class="form-group">
+            <label for="libEmail">Email*</label>
+            <input type="email" class="form-control" id="libEmail" required placeholder="Enter your email">
+        </div>
+
+        <div class="mb-3">
+            <h5>Library Card Cost: ₹<span id="cardCost">0</span></h5>
+            <small class="text-dark">Free for children under 18 | ₹150 for adults</small>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="registerCard()">🎫 Register Card</button>
+    </form>
+
+    <div id="cardConfirmation" class="alert alert-success mt-4" style="display: none;">
+        ✅ Library card successfully registered! Enjoy your reading journey.
+    </div>
 </section>
+
+<script>
+    function calculateCardCost() {
+        const age = parseInt(document.getElementById("libAge").value);
+        const cost = (age < 18) ? 0 : 150;
+        document.getElementById("cardCost").innerText = cost;
+    }
+
+    function registerCard() {
+        const name = document.getElementById("libName").value.trim();
+        const age = document.getElementById("libAge").value.trim();
+        const email = document.getElementById("libEmail").value.trim();
+
+        if (!name || !age || !email) {
+            alert("Please fill out all required fields.");
+            return;
+        }
+
+        document.getElementById("cardConfirmation").style.display = "block";
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+</script>
+<section id="membership" class="container my-5">
+    <h2 class="text-center mb-4">📘 Join PustakChai Membership</h2>
+
+    <form>
+        <div class="form-group">
+            <label for="memName">Name*</label>
+            <input type="text" class="form-control" id="memName" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="memAge">Age*</label>
+            <input type="number" class="form-control" id="memAge" placeholder="Enter your age" required
+                onchange="calculateMembershipCost()">
+        </div>
+
+        <div class="form-group">
+            <label for="memEmail">Email*</label>
+            <input type="email" class="form-control" id="memEmail" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="visuallyImpaired"
+                onchange="toggleAccessibilityOptions(); calculateMembershipCost();">
+            <label class="form-check-label" for="visuallyImpaired">
+                I am visually impaired (Get Braille books, Audiobooks, TTS)
+            </label>
+        </div>
+
+        <div id="accessOptions" style="display: none;">
+            <div class="form-group">
+                <label for="formatSelect">Preferred Content Format:</label>
+                <select class="form-control" id="formatSelect">
+                    <option>Braille Books</option>
+                    <option>Audiobooks</option>
+                    <option>Text-to-Speech (TTS)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="langSelect">Preferred Reading Language:</label>
+            <select class="form-control" id="langSelect">
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Bengali</option>
+                <option>Marathi</option>
+                <option>Telugu</option>
+                <option>Tamil</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="newsletter">
+            <label class="form-check-label" for="newsletter">Subscribe to Book Recommendations & Events</label>
+        </div>
+
+        <div class="mb-3">
+            <h5>Membership Cost: ₹<span id="membershipCost">0</span></h5>
+            <small class="text-muted d-block">
+                <p style="color: #212529;">
+                    ₹899 for visually impaired | ₹500 for youth under 18 | ₹1199 for adults            </p>
+               
+            </small>
+        </div>
+
+        <button type="button" class="btn btn-success btn-block" onclick="confirmMembership()">🎟 Activate
+            Membership</button>
+    </form>
+
+    <div id="membershipConfirmation" class="alert alert-success mt-4" style="display: none;">
+        ✅ Your membership is booked! Welcome to PustakChai's inclusive reading community.
+    </div>
+</section>
+
+<script>
+    function calculateMembershipCost() {
+        const age = parseInt(document.getElementById("memAge").value) || 0;
+        const isVisuallyImpaired = document.getElementById("visuallyImpaired").checked;
+        let cost = 0;
+
+        if (isVisuallyImpaired) {
+            cost = 899;
+        } else if (age < 18) {
+            cost = 500;
+        } else {
+            cost = 1199;
+        }
+
+        document.getElementById("membershipCost").innerText = cost;
+    }
+
+    function toggleAccessibilityOptions() {
+        const isChecked = document.getElementById("visuallyImpaired").checked;
+        document.getElementById("accessOptions").style.display = isChecked ? "block" : "none";
+    }
+
+    function confirmMembership() {
+        const name = document.getElementById("memName").value.trim();
+        const age = document.getElementById("memAge").value.trim();
+        const email = document.getElementById("memEmail").value.trim();
+
+        if (!name || !age || !email) {
+            alert("Please complete all required fields.");
+            return;
+        }
+
+        document.getElementById("membershipConfirmation").style.display = "block";
+        window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+</script>
+<section id="updates" class="container my-5">
+    <h2 class="text-center mb-4">📢 What's New at PustakChai</h2>
+
+    <div class="row">
+        <!-- Events Section -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    📅 Upcoming Events
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        🎤 <strong>Talk Show with Meghna Pant</strong><br>
+                        Date: June 15, 2025 — Join us for an inspiring discussion on writing & womanhood.
+                    </li>
+                    <li class="list-group-item">
+                        ✍️ <strong>Local Author Meetup</strong><br>
+                        Date: June 22, 2025 — Engage with budding writers from your city.
+                    </li>
+                    <li class="list-group-item">
+                        📚 <strong>Community Book Donation Drive</strong><br>
+                        Running all July — Share knowledge, donate your books!
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- New Books Section -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    📖 New Arrivals
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">🌟 *The Book Thief* by Markus Zusak (English)</li>
+                    <li class="list-group-item">📕 *Raag Darbari* by Shrilal Shukla (Hindi)</li>
+                    <li class="list-group-item">📘 *Wings of Fire* – Youth Edition (English & Hindi)</li>
+                    <li class="list-group-item">📙 Regional classics now available in Tamil, Bengali & Marathi!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bonus Features -->
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-warning">
+            🌟 Extra Features to Explore!
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">🚐 <strong>Mobile Reading Van</strong> – Bringing books to rural areas every
+                weekend.</li>
+            <li class="list-group-item">🗣️ <strong>Regional Storytelling Night</strong> – Fridays at 7 PM, folk tales
+                from across India.</li>
+            <li class="list-group-item">🛠️ <strong>Skill-Sharing Corner</strong> – Book-based peer teaching (resume
+                writing, coding, language learning).</li>
+            <li class="list-group-item">🎧 <strong>Audio Lounge</strong> – Quiet zone for listening to audiobooks with
+                headphones.</li>
+        </ul>
+    </div>
+</section>
+<section id="feedbacks" class="container my-5">
+    <h2 class="text-center mb-4">💬 What Readers Say About PustakChai</h2>
+
+    <!-- Carousel for mobile (smaller than md) -->
+    <div id="feedbackCarousel" class="carousel slide d-md-none mb-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📚 "Perfect blend of books & chai"</h5>
+                        <p class="card-text">
+                            "This space rekindled my love for Hindi novels. The ambience, the tea, and the community
+                            vibe are unmatched!"
+                        </p>
+                        <p class="text-muted text-right mb-0">– Anaya S., Delhi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🎧 "Audiobooks helped my father"</h5>
+                        <p class="card-text">
+                            "My visually impaired father uses the text-to-speech service daily. Truly inclusive and
+                            heartwarming!"
+                        </p>
+                        <p class="text-muted text-right mb-0">– Rohan K., Pune</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🧒 "A fun hangout for students"</h5>
+                        <p class="card-text">
+                            "As a NEET aspirant, I often visit for quiet study time and use the skill-book shelf. The
+                            tea is a bonus!"
+                        </p>
+                        <p class="text-muted text-right mb-0">– Tanmay R., Lucknow</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">📖 "My kids love Amar Chitra Katha"</h5>
+                        <p class="card-text">
+                            "My 8-year-old twins have become mini storytellers thanks to the weekend kids' reading
+                            club!"
+                        </p>
+                        <p class="text-muted text-right mb-0">– Meena V., Ahmedabad</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🌍 "A multilingual paradise"</h5>
+                        <p class="card-text">
+                            "I found Bengali books I hadn't seen in decades. This place preserves and celebrates
+                            language diversity."
+                        </p>
+                        <p class="text-muted text-right mb-0">– Debashree M., Kolkata</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">🪔 "It’s a cultural adda"</h5>
+                        <p class="card-text">
+                            "From folk storytelling nights to chai over poetry — PustakChai feels like a home for
+                            thinkers."
+                        </p>
+                        <p class="text-muted text-right mb-0">– Kartik T., Bhopal</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Grid for md+ screens -->
+    <div class="row d-none d-md-flex">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">📚 "Perfect blend of books & chai"</h5>
+                    <p class="card-text">
+                        "This space rekindled my love for Hindi novels. The ambience, the tea, and the community vibe
+                        are unmatched!"
+                    </p>
+                    <p class="text-muted text-right mb-0">– Anaya S., Delhi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🎧 "Audiobooks helped my father"</h5>
+                    <p class="card-text">
+                        "My visually impaired father uses the text-to-speech service daily. Truly inclusive and
+                        heartwarming!"
+                    </p>
+                    <p class="text-muted text-right mb-0">– Rohan K., Pune</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🧒 "A fun hangout for students"</h5>
+                    <p class="card-text">
+                        "As a NEET aspirant, I often visit for quiet study time and use the skill-book shelf. The tea is
+                        a bonus!"
+                    </p>
+                    <p class="text-muted text-right mb-0">– Tanmay R., Lucknow</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">📖 "My kids love Amar Chitra Katha"</h5>
+                    <p class="card-text">
+                        "My 8-year-old twins have become mini storytellers thanks to the weekend kids' reading club!"
+                    </p>
+                    <p class="text-muted text-right mb-0">– Meena V., Ahmedabad</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🌍 "A multilingual paradise"</h5>
+                    <p class="card-text">
+                        "I found Bengali books I hadn't seen in decades. This place preserves and celebrates language
+                        diversity."
+                    </p>
+                    <p class="text-muted text-right mb-0">– Debashree M., Kolkata</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🪔 "It’s a cultural adda"</h5>
+                    <p class="card-text">
+                        "From folk storytelling nights to chai over poetry — PustakChai feels like a home for thinkers."
+                    </p>
+                    <p class="text-muted text-right mb-0">– Kartik T., Bhopal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="submit-feedback" class="container my-5">
+    <h3 class="text-center mb-4">📝 Share Your Feedback</h3>
+    <form id="feedbackForm" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required />
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Your Location</label>
+            <input type="text" class="form-control" id="location" placeholder="City, State" required />
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Feedback Title</label>
+            <input type="text" class="form-control" id="title" placeholder="E.g. 'Loved the ambiance!'" required />
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Your Feedback</label>
+            <textarea class="form-control" id="message" rows="3" placeholder="Write your feedback here..."
+                required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+    </form>
+</section>
+
+<script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('Thanks for your feedback! (Form submission handling to be implemented)');
+        this.reset();
+    });
+</script>
+  
+
+<section id="menu" class="container my-5">
+    <h2 class="text-center mb-4">☕ PustakChai Menu</h2>
+    <div class="row">
+
+        <!-- Sandwich -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="sandwich.jpg" class="card-img-top" alt="Sandwich">
+                <div class="card-body">
+                    <h5 class="card-title">🥪 Grilled Sandwich</h5>
+                    <p class="card-text">Freshly made with vegetables and cheese.</p>
+                    <p class="text-muted">₹80</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coffee -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="coffe.jpg" class="card-img-top" alt="Coffee">
+                <div class="card-body">
+                    <h5 class="card-title">☕ Hot Coffee</h5>
+                    <p class="card-text">Brewed filter coffee or cappuccino, your choice.</p>
+                    <p class="text-muted">₹60</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Puff -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="puff.jpg" class="card-img-top" alt="Veg Puff">
+                <div class="card-body">
+                    <h5 class="card-title">🥟 Veg Puff</h5>
+                    <p class="card-text">Crispy puff filled with spiced veggies.</p>
+                    <p class="text-muted">₹40</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Croissant -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="crossiant.jpg" class="card-img-top" alt="Croissant">
+                <div class="card-body">
+                    <h5 class="card-title">🥐 Butter Croissant</h5>
+                    <p class="card-text">Flaky, soft and baked fresh every morning.</p>
+                    <p class="text-muted">₹70</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combo Meal -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <img src="meal.jpg" class="card-img-top"
+                    alt="Combo Meal">
+                <div class="card-body">
+                    <h5 class="card-title">🍽️ Chai + Sandwich Combo</h5>
+                    <p class="card-text">A perfect reader's meal — fresh sandwich with a cup of chai.</p>
+                    <p class="text-muted fw-bold">₹150</p>
+                </div
+
 </body>
 
 </html>
