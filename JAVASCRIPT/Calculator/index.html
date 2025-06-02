@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Font Awesome -->
+    
+    <script src="https://kit.fontawesome.com/996973c893.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
+        rel="stylesheet" />
+    
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    
+    <!-- Custom CSS -->
+    
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <center> 
+    <div class="container">
+        <div class="output">
+            <input type="text" placeholder="0" readonly>
+        </div>
+        <div class="btns"> 
+            <button onclick="clr()" class="sp"> 🗑 </button>
+            
+            <button onclick="insert('%')" class="sp"> % </button>
+            <button onclick="insert('÷')" class="sp"> ÷ </button>
+            <button onclick="del()" class="sp">⌫</button>
+            <br>
+            <button onclick="insert('1')" > 1 </button>
+            <button onclick="insert('2')" > 2 </button>
+            <button onclick="insert('3')"> 3 </button>
+            <button onclick="insert('÷')" class="sp"> ÷ </button> 
+            <br>         
+            
+            <button onclick="insert('4')" > 4 </button>
+            <button onclick="insert('5')" > 5 </button>
+            <button onclick="insert('6')" > 6 </button>
+            <button onclick="insert('-')" class="sp"> - </button>
+            <br> 
+            
+            <button onclick="insert('7')" > 7 </button>
+            <button onclick="insert('9')" > 8 </button>
+            <button onclick="insert('0')" > 0 </button>
+            <button onclick="insert('+')" class="sp"> + </button>
+            <br> 
+            <button onclick="insert('.')" class="sp"> . </button>
+            <button onclick="calc()" class="spequal"> = </button>
+
+         
+
+        </div>
+        <div class="appmenu"> 
+            <div class="icon">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+            <div class="menu">
+                <div class="blue"> </div>
+                <div class="pink"> </div>
+                <div class="red"> </div>
+                <div class="yellow"> </div>
+                <div class="green"> </div>
+            </div>
+        </div>
+    </div>
+</center>
+    
+</body>
+</html>
