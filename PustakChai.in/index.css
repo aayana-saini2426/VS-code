@@ -106,3 +106,7 @@ body {
 #accessOptions li {
     margin: 10px 0;
 }
+
+.navbar navbar-expand-lg navbar-dark bg-dark{
+    position: absolute;
+}
