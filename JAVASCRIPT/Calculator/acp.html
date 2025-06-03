@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bank App</title>
+<link rel="stylesheet" href="acp.css">
+
+</head><body>
+
+    <div class="container">
+        <h2>Bank App</h2>
+
+        <label>Enter Transaction Amount</label><br>
+        <input type="number" id="amount"><br>
+
+        <button onclick="credit()">Credit</button>
+        <button onclick="debit()">Debit</button>
+
+        <p id="balance">Your Account Balance is : Rs.0</p>
+    </div>
+
+    <script>
+        let balance = 0;
+
+        function credit() {
+            let amount = document.getElementById("amount").value;
+            amount = Number(amount);
+
+            if (amount > 0) {
+             balance = balance + amount;
+                document.getElementById("balance").innerText = "Your Account Balance is : Rs." + balance;
+             document.getElementById("amount").value = " ";
+            } else {
+                alert("Please enter a valid amount");
+            }
+        }
+
+        function debit() {
+            let amount = document.getElementById("amount").value;
+            amount = Number(amount);
+
+            if (amount > 0) {
+                if (amount <= balance) {
+                    balance = balance - amount;
+                    document.getElementById("balance").innerText = "Your Account Balance is : Rs." + balance;
+                    document.getElementById("amount").value = "";
+                } else {
+                    alert("Not enough balance!");
+                }
+            } else {
+                alert("Please enter a valid amount");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
