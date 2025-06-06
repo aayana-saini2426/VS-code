@@ -146,5 +146,25 @@ menu.open{
 }
 
 body.blue{ 
-    --main
+    --main-color: blue; 
 }
+ 
+body.pink{
+    --main-color: rgb(255, 0, 136); 
+
+}
+body.red {
+    --main-color: rgb(255, 0, 0);
+
+}
+
+body.yellow {
+    --main-color: rgb(255, 255, 0);
+
+}
+
+body.green {
+    --main-color:rgb(0, 255, 140);
+
+}
+ 
