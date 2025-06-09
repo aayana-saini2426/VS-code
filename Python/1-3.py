@@ -1,0 +1,7 @@
+firstnumber=int(input("Enter first number:"))
+secondnumber=int(input("Enter the seccond number:"))
+print("the sum is:-", firstnumber + secondnumber)
+print("the exponential power is:-", firstnumber**secondnumber)
+print("the product is:-", firstnumber*secondnumber)
+print("the difference is:-", firstnumber-secondnumber)
+print("the quotient is:-", firstnumber/secondnumber)
