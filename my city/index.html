@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MyCity Genome</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .genome {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .gene {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gene:hover {
+      transform: scale(1.15);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Color categories */
+    .eco {
+      background-color: #27ae60;
+    }
+
+    .economic {
+      background-color: #2980b9;
+    }
+
+    .cultural {
+      background-color: #f39c12;
+    }
+
+    .health {
+      background-color: #c0392b;
+    }
+
+    .education {
+      background-color: #8e44ad;
+    }
+
+    .innovation {
+      background-color: #16a085;
+    }
+
+    .label {
+      margin-top: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .gene-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #ccc;
+      background-color: #ffffff;
+      width: 80%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      display: none;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .bottom-section {
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #ffffff;
+      border-top: 3px solid #ddd;
+      border-radius: 10px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bottom-section h2 {
+      color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .stat-box {
+      background-color: #f2f2f2;
+      padding: 15px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      min-width: 180px;
+    }
+
+    .stat-box h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #2980b9;
+    }
+
+    .stat-box p {
+      margin: 5px 0 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🌐 MyCity Genome</h1>
+  <p>Click on a gene to explore your city's living data.</p>
+
+  <div class="genome">
+    <div class="gene-box">
+      <div class="gene eco" onclick="showInfo('🌿 Ecology: 43% green cover, 80+ native trees')">🌿</div>
+      <div class="label">Ecology</div>
+    </div>
+
+    <div class="gene-box">
+      <div class="gene economic" onclick="showInfo('💰 Economy: 245 startups, avg income ₹22,000')">💰</div>
+      <div class="label">Economy</div>
+    </div>
+
+    <div class="gene-box">
+      <div class="gene cultural" onclick="showInfo('🎨 Culture: 12 libraries, 8 art hubs, 4 theaters')">🎨</div>
+      <div class="label">Culture</div>
+    </div>
+
+    <div class="gene-box">
+      <div class="gene health" onclick="showInfo('🏥 Health: 95% vaccine coverage, 4 new clinics')">🏥</div>
+      <div class="label">Health</div>
+    </div>
+
+    <div class="gene-box">
+      <div class="gene education" onclick="showInfo('🎓 Education: 89% literacy rate, 6 colleges')">🎓</div>
+      <div class="label">Education</div>
+    </div>
+
+    <div class="gene-box">
+      <div class="gene innovation" onclick="showInfo('🧠 Innovation: 3 AI labs, 5 patents this year')">🧠</div>
+      <div class="label">Innovation</div>
+    </div>
+  </div>
+
+  <div id="infoBox" class="info-box"></div>
+
+  <!-- BOTTOM SECTION -->
+  <div class="bottom-section">
+    <h2>🧬 About MyCity Genome</h2>
+    <p>This is a digital DNA strand of your city – combining ecology, economy, culture, and innovation. Each gene
+      represents a key feature of urban life, and it evolves as the city grows.</p>
+
+    <div class="stats">
+      <div class="stat-box">
+        <h3>43%</h3>
+        <p>Green Cover</p>
+      </div>
+      <div class="stat-box">
+        <h3>245</h3>
+        <p>Startups</p>
+      </div>
+      <div class="stat-box">
+        <h3>89%</h3>
+        <p>Literacy Rate</p>
+      </div>
+      <div class="stat-box">
+        <h3>95%</h3>
+        <p>Healthcare Access</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showInfo(info) {
+      var box = document.getElementById("infoBox");
+      box.style.display = "block";
+      box.innerText = info;
+    }
+  </script>
+
+</body>
+
+</html>
