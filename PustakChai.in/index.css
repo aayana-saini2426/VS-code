@@ -9,7 +9,8 @@
 
 /* Body Styling */
 body {
-    font-family: 'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif !important;
+        
     background-color: #93B18A;
     color: #000000;
     line-height: 1.6;
@@ -110,3 +111,13 @@ body {
 .navbar navbar-expand-lg navbar-dark bg-dark{
     position: absolute;
 }
+body {
+    background-color: #93B18A !important;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #93B18A;
+    font-weight: bold;
+}
+

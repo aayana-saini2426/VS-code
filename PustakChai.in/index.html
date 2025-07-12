@@ -3,12 +3,18 @@
 <html lang="en">
 
 <head>
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>PustakChai.in</title>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 
     <!-- Font Awesome -->
 
@@ -66,6 +72,17 @@
                 <li class="nav-item"><a  href="#feedbacks.html">Feedbacks</a></li>
                 <li class="nav-item"><a  href="#menu.html">Menu</a></li>
 
+                <!-- Inside your header or near top -->
+                <div id="font-controls" style="margin-top: 10px;">
+                    <button onclick="changeFontSize(1)">A</button>
+                    <button onclick="changeFontSize(1.2)">A+</button>
+                    <button onclick="changeFontSize(1.5)">A++</button>
+                </div>
+
+               
+
+  
+
             </ul>
 
         </div>
@@ -120,6 +137,84 @@
                         style="max-height: 300px; object-fit: contain;">
                 </div>
             </div>
+
+            
+                <meta charset="utf-8" />
+                <title>Pustak Chai – Interactive Impact Map</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+                <!-- Leaflet CSS -->
+                <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+            
+                <style>
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        font-family: sans-serif;
+                        background-color: #f9f9f9;
+                        text-align: center;
+                    }
+            
+                    h2 {
+                        margin: 20px 0;
+                        color: #4CAF50;
+                    }
+            
+                    #map {
+                        height: 500px;
+                        width: 90%;
+                        margin: auto;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    }
+                </style>
+            </head>
+            
+            <body>
+            
+                <h2>📍 Villages Reached – Interactive Map</h2>
+                <div id="map"></div>
+            
+                <!-- Leaflet JS -->
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script>
+                    var map = L.map('map').setView([22.9734, 78.6569], 5); // Centered on India
+
+                    // OpenStreetMap Layer
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '© OpenStreetMap contributors'
+                    }).addTo(map);
+
+                    // Sample Points (replace with your real locations)
+                    const impactPoints = [
+                        {
+                            name: "Village A – Madhya Pradesh",
+                            coords: [23.2599, 77.4126],
+                            info: "Braille Books: 50<br>Audiobooks: 20"
+                        },
+                        {
+                            name: "Village B – Uttar Pradesh",
+                            coords: [26.8467, 80.9462],
+                            info: "Donated Books: 120<br>Youth Cards: 35"
+                        },
+                        {
+                            name: "Village C – Bihar",
+                            coords: [25.5941, 85.1376],
+                            info: "Rural Event Held<br>Donations: 70"
+                        }
+                    ];
+
+                    impactPoints.forEach(point => {
+                        L.marker(point.coords)
+                            .addTo(map)
+                            .bindPopup(`<strong>${point.name}</strong><br>${point.info}`);
+                    });
+                </script>
+            
+            </body>
+            
+            </html>
+
         </section>
 
         <br>
@@ -275,6 +370,12 @@
             document.getElementById("confirmationMessage").style.display = "block";
             window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
         }
+
+        
+             
+  
+       
+
     </script>
 
 <section id="register-library-card.html" class="container my-5">
@@ -408,6 +509,9 @@
     <div id="membershipConfirmation" class="alert alert-success mt-4" style="display: none;">
         ✅ Your membership is booked! Welcome to PustakChai's inclusive reading community.
     </div>
+
+
+    
 </section>
 
 <script>
@@ -720,6 +824,12 @@
         alert('Thanks for your feedback! (Form submission handling to be implemented)');
         this.reset();
     });
+
+            function changeFontSize(size) {
+                document.body.style.fontSize = size + 'rem';
+  }
+
+
 </script>
   
 
@@ -784,8 +894,8 @@
                     <h5 class="card-title">🍽️ Chai + Sandwich Combo</h5>
                     <p class="card-text">A perfect reader's meal — fresh sandwich with a cup of chai.</p>
                     <p class="text-muted fw-bold">₹150</p>
-                </div
-
+        </div
+      
 </body>
 
 </html>
