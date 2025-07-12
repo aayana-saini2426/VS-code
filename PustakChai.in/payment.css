@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f7f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.payment-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.payment-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.qr-image {
+    width: 180px;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-weight: 600;
+    color: #444;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #93B18A;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #7e9e73;
+    transform: scale(1.05);
+}
+
+.invoice-box {
+    display: none;
+    text-align: center;
+    background-color: #eaf7e9;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.invoice-box h3 {
+    color: #2d8236;
+    margin-bottom: 1rem;
+}
+
+.back-btn {
+    margin-top: 1rem;
+    background-color: #444;
+}
+
+.back-btn:hover {
+    background-color: #222;
+}

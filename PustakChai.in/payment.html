@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay Now - PustakChai</title>
+    <style>
+        body {
+            background-color: #f8f4f0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .payment-container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #5c4033;
+            margin-bottom: 20px;
+        }
+
+        .qr-image {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #5c4033;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            background-color: #fff;
+        }
+
+        .btn {
+            background-color: #5c4033;
+            color: #fff;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #402d22;
+        }
+
+        .invoice-box {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #e0c9a6;
+            border-radius: 8px;
+            background-color: #fff7e6;
+            text-align: center;
+        }
+
+        .invoice-box h3 {
+            color: #2d8236;
+        }
+
+        .invoice-box p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .invoice-box a.btn {
+            margin-top: 15px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #5c4033;
+        }
+
+        .radio-group {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .radio-group label {
+            display: block;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="payment-container">
+        <h2>Pay Now – PustakChai</h2>
+        <img src="Pustak Chai Code.png" alt="QR Scanner" class="qr-image" />
+
+        <form id="paymentForm" onsubmit="showInvoice(event)">
+            <label>What would you like to purchase?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="purchase" value="Membership" required> 📚 Membership</label>
+                <label><input type="radio" name="purchase" value="Library Card"> 📖 Library Card</label>
+                <label><input type="radio" name="purchase" value="Booking"> ☕ Booking</label>
+            </div>
+
+            <label for="account">Account Number</label>
+            <input type="text" id="account" required placeholder="Enter your XYZ account no." />
+
+            <label for="pin">Account PIN</label>
+            <input type="password" id="pin" required placeholder="Enter PIN" />
+
+            <button class="btn" type="submit">Make Payment</button>
+        </form>
+
+        <div id="invoice" class="invoice-box">
+            <h3>✅ Payment Successful</h3>
+            <p><strong>Invoice ID:</strong> #PC987654</p>
+            <p><strong>Status:</strong> Confirmed</p>
+            <p id="purchaseTypeText"></p>
+          
+            <a href="profile.html" class="btn">➡ View Profile</a>
+        </div>
+    </div>
+
+    <script>
+        function showInvoice(e) {
+            e.preventDefault();
+
+            const account = document.getElementById("account").value.trim();
+            const pin = document.getElementById("pin").value.trim();
+            const purchase = document.querySelector('input[name="purchase"]:checked');
+
+            if (!account || !pin || !purchase) {
+                alert("Please fill all required fields and select a purchase type.");
+                return;
+            }
+
+            const purchaseType = purchase.value;
+
+            // Get existing payments from localStorage or initialize empty array
+            let payments = JSON.parse(localStorage.getItem("payments") || "[]");
+
+            // Add this account if not already added
+            if (!payments.some(entry => entry.accountNumber === account)) {
+                payments.push({
+                    accountNumber: account,
+                    date: new Date().toISOString(),
+                    type: purchaseType
+                });
+                localStorage.setItem("payments", JSON.stringify(payments));
+            }
+
+            // Custom success message based on type
+            let successMessage = "";
+            if (purchaseType === "Membership") {
+                successMessage = "🎉 Thanks for buying our Membership! Enjoy exclusive perks and priority access.";
+            } else if (purchaseType === "Library Card") {
+                successMessage = "📖 Your Library Card is now active! Start borrowing books today.";
+            } else if (purchaseType === "Booking") {
+                successMessage = "☕ Booking Confirmed! We look forward to hosting you at PustakChai.";
+            }
+
+            document.getElementById("paymentForm").style.display = "none";
+            document.getElementById("invoice").style.display = "block";
+            document.getElementById("purchaseTypeText").innerHTML =
+                `<strong>Purchased:</strong> ${purchaseType}<br><br>${successMessage}`;
+        }
+    </script>
+
+</body>
+
+</html>

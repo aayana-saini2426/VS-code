@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Profile - PustakChai</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #eaf2ea, #d5e6d3);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h2 {
+            color: #5c4033;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background-color: #7e9e73;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #5f7b59;
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #cce5cc;
+            color: #2e7031;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="profileContainer">
+        <!-- Dynamic Content Goes Here -->
+    </div>
+
+    <script>
+        const container = document.getElementById("profileContainer");
+
+        // Check if profile already exists
+        const name = localStorage.getItem("userName");
+        const email = localStorage.getItem("email");
+        const phone = localStorage.getItem("phone");
+        const genre = localStorage.getItem("genre");
+        const account = localStorage.getItem("accountNumber");
+        const payments = JSON.parse(localStorage.getItem("payments") || "[]");
+        const isMember = payments.some(entry => entry.accountNumber === account);
+        localStorage.setItem("isMember", isMember.toString());
+
+        if (name && account) {
+            // Show profile view
+            container.innerHTML = `
+      <h2>👤 Welcome, ${name}</h2>
+      <div class="profile-info">
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Favorite Genre:</strong> ${genre}</p>
+        <p><strong>Account Number:</strong> ${account}</p>
+        <p class="tag">${isMember ? '🌟 Premium Member' : '📄 Regular Visitor'}</p>
+      </div>
+      <button class="btn" onclick="clearProfile()">🗑 Clear Profile</button>
+      <button class="btn" onclick="window.location.href='index.html'">🔙 Back to Home</button>
+    `;
+        } else {
+            // Show profile creation form
+            container.innerHTML = `
+      <h2>📋 Create Your Profile</h2>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="10-digit mobile number" />
+
+      <label for="genre">Favorite Genre</label>
+      <input type="text" id="genre" placeholder="Mystery, Sci-fi, etc." />
+
+      <label for="account">Account Number</label>
+      <input type="text" id="account" placeholder="XYZ Account Number" />
+
+      <button class="btn" onclick="saveProfile()">Create Profile</button>
+      <button class="btn" onclick="window.location.href='index.html'">🔙 Back to Home</button>
+    `;
+        }
+
+        function saveProfile() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const genre = document.getElementById("genre").value.trim();
+            const account = document.getElementById("account").value.trim();
+
+            if (!name || !email || !phone || !account) {
+                alert("Please fill out all required fields.");
+                return;
+            }
+
+            localStorage.setItem("userName", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("genre", genre);
+            localStorage.setItem("accountNumber", account);
+
+            // Refresh the page to show profile
+            window.location.reload();
+        }
+
+        function clearProfile() {
+            localStorage.removeItem("userName");
+            localStorage.removeItem("email");
+            localStorage.removeItem("phone");
+            localStorage.removeItem("genre");
+            localStorage.removeItem("accountNumber");
+            localStorage.removeItem("isMember");
+            window.location.reload();
+        }
+    </script>
+
+</body>
+
+</html>

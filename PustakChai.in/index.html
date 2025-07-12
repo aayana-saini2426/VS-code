@@ -1,92 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>PustakChai.in</title>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <!-- Font Awesome -->
-
     <script src="https://kit.fontawesome.com/996973c893.js" crossorigin="anonymous"></script>
-
     <!-- Google Fonts -->
-
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
         rel="stylesheet" />
-
     <!-- Bootstrap CSS -->
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-
     <!-- Custom CSS -->
-
     <link rel="stylesheet" href="index.css" />
 
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- Navigation Bar -->
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <a class="navbar-brand" href="#">
-
-            <img src="Screenshot 2025-05-29 125021.png" height="70px" width="500px" alt="Logo" />
-
-        </a>
-
+        <a class="navbar-brand" href="#"><img src="Screenshot 2025-05-29 125021.png" height="70px" width="500px"
+                alt="Logo" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-
             <ul class="navbar-nav ml-auto">
-
-                <li class="nav-item active"><a  href="#about">About us</a></li>
-
-                <li class="nav-item"><a href="#about.html">Social Media</a></li>
-
-                <li class="nav-item"><a  href="#make-a-booking.html">Make a Booking</a></li>
-
-                <li class="nav-item"><a  href="#register-library-card.html">Register Library Card</a></li>
-
-                <li class="nav-item"><a  href="#membership.html">Membership</a></li>
-                <li class="nav-item"><a  href="#updates.html">Updates</a></li>
-                <li class="nav-item"><a  href="#feedbacks.html">Feedbacks</a></li>
-                <li class="nav-item"><a  href="#menu.html">Menu</a></li>
-
-                <!-- Inside your header or near top -->
-                <div id="font-controls" style="margin-top: 10px;">
-                    <button onclick="changeFontSize(1)">A</button>
-                    <button onclick="changeFontSize(1.2)">A+</button>
-                    <button onclick="changeFontSize(1.5)">A++</button>
-                </div>
-
-               
-
-  
+                <li class="nav-item active"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#social-media">Social Media</a></li>
+                <li class="nav-item"><a class="nav-link" href="#make-a-booking">Make a Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="#register-library-card">Register Library Card</a></li>
+                <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+                <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#feedbacks">Feedbacks</a></li>
+                <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                                <button class="btn" onclick="location.href='profile.html'">👤 View Profile</button>
+            
 
             </ul>
-
         </div>
-
     </nav>
 
     <!-- Bootstrap Scripts (jQuery, Popper, Bootstrap) -->
@@ -103,7 +68,7 @@
 
     <center>
 
-        <section id="about.html" class="container my-5">
+        <section id="about" class="container my-5">
             <div class="row align-items-center">
                 <!-- Text Content -->
                 <div class="col-md-7">
@@ -222,58 +187,69 @@
         <br>
         
         <br>
-        
-       <section id="Social-Media.html" class="text-center my-5">
-    <h2 class="mb-4">Follow Us on Social Media</h2>
+<!-- Social Media Section -->
+<!-- Font Awesome for Icons (Optional if using custom image logos) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    
-<container id="Social-Media"> <div class="social-media-icons d-flex justify-content-center gap-3 flex-wrap">
-        <a href="https://www.facebook.com" target="_blank" class="btn btn-primary social-btn" id="facebook">
-            <i class="fab fa-facebook-f me-2"></i> Facebook
-            
+<!-- Section HTML -->
+<section id="social-media" class="container text-center my-5">
+    <h2 class="mb-4">📱 Follow Us on Social Media</h2>
+
+    <div class="d-flex justify-content-center gap-4 flex-wrap">
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com" target="_blank" class="social-btn text-decoration-none">
+            <div class="icon-circle mb-2">
+                <img src="fb.jpg" alt="Facebook" height="60" width="60" class="rounded-circle">
+            </div>
+            <div class="fw-semibold text-dark">Facebook</div>
         </a>
-        <img src="fb.jpg" height="50px" width="50px" style="border-radius: 50%;">
-        <a href="https://www.instagram.com" target="_blank" class="btn btn-danger social-btn" id="instagram">
-            <i class="fab fa-instagram me-2"></i> Instagram
 
-                   </a>
-                <img src="insta.jpg" height="50px" width="50px" style="border-radius: 50%;">
-    </div></container>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com" target="_blank" class="social-btn text-decoration-none">
+            <div class="icon-circle mb-2">
+                <img src="insta.jpg" alt="Instagram" height="60" width="60" class="rounded-circle">
+            </div>
+            <div class="fw-semibold text-dark">Instagram</div>
+        </a>
+
+    </div>
 </section>
-<br>
+
 
 <br>
 
 <br>
-
 
 <style>
-    #Social-Media .social-btn {
-        font-weight: 600;
-        font-size: 1.1rem;
-        padding: 0.65rem 1.5rem;
-        border-radius: 50px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        box-shadow: 0 4px 8px rgb(0 0 0 / 0.15);
-        display: inline-flex;
+    #social-media .social-btn {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    #Social-Media .social-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 16px rgb(0 0 0 / 0.25);
+    #social-media .social-btn:hover {
+        transform: translateY(-5px);
         text-decoration: none;
     }
 
-    /* Optional: Adjust icon spacing if needed */
-    #Social-Media i {
-        font-size: 1.2rem;
+    .icon-circle {
+        background: white;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
-.Social-Media{ 
-    box-shadow: 5px 5px 5px  #000000;
-    border-radius: 50%; }
+
+    .icon-circle img {
+        display: block;
+    }
+
+    #social-media h2 {
+        font-family: 'Georgia', serif;
+    }
 </style>
-          
+
             </div>
 
     </center>
@@ -334,6 +310,9 @@
     
             <button type="button" class="btn btn-success" onclick="confirmBooking()">✅ Book My Spot</button>
         </form>
+
+        <a href="payment.html" class="btn">Pay Now</a>
+
     
         <div id="confirmationMessage" class="alert alert-info mt-4" style="display: none;">
             ✅ Your booking is done! Thank you for choosing PustakChai.
@@ -378,7 +357,7 @@
 
     </script>
 
-<section id="register-library-card.html" class="container my-5">
+<section id="register-library-card" class="container my-5">
     <h2 class="text-center mb-4">📚 Register for a Library Card</h2>
 
     <form>
@@ -404,6 +383,8 @@
 
         <button type="button" class="btn btn-primary" onclick="registerCard()">🎫 Register Card</button>
     </form>
+    <a href="payment.html" class="btn">Pay Now</a>
+
 
     <div id="cardConfirmation" class="alert alert-success mt-4" style="display: none;">
         ✅ Library card successfully registered! Enjoy your reading journey.
@@ -504,6 +485,8 @@
 
         <button type="button" class="btn btn-success btn-block" onclick="confirmMembership()">🎟 Activate
             Membership</button>
+            <a href="payment.html" class="btn">Pay Now</a>
+
     </form>
 
     <div id="membershipConfirmation" class="alert alert-success mt-4" style="display: none;">
@@ -610,7 +593,7 @@
         </ul>
     </div>
 </section>
-<section id="feedbacks.html" class="container my-5">
+<section id="feedbacks" class="container my-5">
     <h2 class="text-center mb-4">💬 What Readers Say About PustakChai</h2>
 
     <!-- Carousel for mobile (smaller than md) -->
@@ -787,7 +770,7 @@
     </div>
 </section>
 
-<section id="submit-feedback." class="container my-5">
+<section id="submit-feedback" class="container my-5">
     <h3 class="text-center mb-4">📝 Share Your Feedback</h3>
     <form id="feedbackForm" class="mx-auto" style="max-width: 600px;">
         <div class="mb-3">
@@ -833,7 +816,7 @@
 </script>
   
 
-<section id="menu.html" class="container my-5">
+<section id="menu" class="container my-5">
     <h2 class="text-center mb-4">☕ PustakChai Menu</h2>
     <div class="row">
 
