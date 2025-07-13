@@ -138,8 +138,8 @@
             <h3>✅ Payment Successful</h3>
             <p><strong>Invoice ID:</strong> #PC987654</p>
             <p><strong>Status:</strong> Confirmed</p>
+            <p id="maskedAccount"></p>
             <p id="purchaseTypeText"></p>
-          
             <a href="profile.html" class="btn">➡ View Profile</a>
         </div>
     </div>
@@ -159,10 +159,8 @@
 
             const purchaseType = purchase.value;
 
-            // Get existing payments from localStorage or initialize empty array
             let payments = JSON.parse(localStorage.getItem("payments") || "[]");
 
-            // Add this account if not already added
             if (!payments.some(entry => entry.accountNumber === account)) {
                 payments.push({
                     accountNumber: account,
@@ -172,7 +170,11 @@
                 localStorage.setItem("payments", JSON.stringify(payments));
             }
 
-            // Custom success message based on type
+            // Mask account number except last 2 digits
+            const maskedAccount = account.slice(0, -2).replace(/./g, "*") + account.slice(-2);
+            document.getElementById("maskedAccount").innerHTML =
+                `<strong>Account Number:</strong> ${maskedAccount}`;
+
             let successMessage = "";
             if (purchaseType === "Membership") {
                 successMessage = "🎉 Thanks for buying our Membership! Enjoy exclusive perks and priority access.";
@@ -188,7 +190,6 @@
                 `<strong>Purchased:</strong> ${purchaseType}<br><br>${successMessage}`;
         }
     </script>
-
 </body>
 
 </html>
