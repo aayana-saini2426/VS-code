@@ -1,0 +1,24 @@
+import sqlite3
+connection=sqlite3.connect("employees.db")
+cursor=connection.cursor()
+cursor.execute("""create table if not exists employees(id integer primary key,name text,salary real)""")
+
+cursor.execute("Insert into employees ('id','name','salary') values (1,'John',50000)")
+cursor.execute("Insert into employees ('id','name','salary') values (2,'Alice',60000)")
+cursor.execute("Insert into employees ('id','name','salary') values (3,'Bob',55000)")
+cursor.execute("Insert into employees ('id','name','salary') values (4,'Eve',70000)")
+cursor.execute("Insert into employees ('id','name','salary') values (5,'Mike',65000)")
+cursor.execute("Insert into employees ('id','name','salary') values (6,'Stacy',65000)")
+cursor.execute("Insert into employees ('id','name','salary') values (7,'Chealsea',60000)")
+cursor.execute("Insert into employees ('id','name','salary') values (8,'Jessica',50000)")
+cursor.execute("Insert into employees ('id','name','salary') values (9,'Becca',70000)")
+cursor.execute("Insert into employees ('id','name','salary') values (10,'Angela',80000)")
+
+
+cursor.execute("select * from employees")
+rows=cursor.fetchall()
+print("EMPLOYEE RECORDS:")
+for row in rows:
+     print(row)
+  
+connection.close()
