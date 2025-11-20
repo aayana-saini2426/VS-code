@@ -1,0 +1,38 @@
+import sqlite3
+
+connection = sqlite3.connect("hospital.db")
+cursor = connection.cursor()
+
+cursor.execute("""CREATE TABLE IF NOT EXISTS hospital_patients(
+id INTEGER PRIMARY KEY,
+name TEXT,
+age INTEGER,
+disease TEXT,
+doctor TEXT,
+room_no INTEGER,
+admission_date TEXT,
+bill_amount REAL
+)""")
+
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (1,'Amit Sharma',45,'Diabetes','Dr. Mehta',101,'2025-11-10',25000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (2,'Riya Kapoor',32,'Asthma','Dr. Singh',102,'2025-11-12',18000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (3,'Vikram Joshi',60,'Heart Disease','Dr. Rao',103,'2025-11-05',40000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (4,'Neha Patel',27,'Flu','Dr. Gupta',104,'2025-11-15',8000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (5,'Suresh Nair',55,'Kidney Stone','Dr. Bhatia',105,'2025-11-08',30000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (6,'Pooja Verma',38,'Migraine','Dr. Sharma',106,'2025-11-11',12000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (7,'Karan Singh',42,'Fever','Dr. Gupta',107,'2025-11-13',6000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (8,'Anjali Das',29,'Allergy','Dr. Mehta',108,'2025-11-09',9000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (9,'Rohit Jain',50,'Back Pain','Dr. Rao',109,'2025-11-07',15000)")
+cursor.execute("INSERT OR IGNORE INTO hospital_patients (id,name,age,disease,doctor,room_no,admission_date,bill_amount) VALUES (10,'Sneha Iyer',36,'Thyroid','Dr. Sharma',110,'2025-11-14',22000)")
+cursor.execute("")
+
+connection.commit()
+
+cursor.execute("SELECT * FROM hospital_patients")
+rows = cursor.fetchall()
+
+print("HOSPITAL PATIENT RECORDS:")
+for row in rows:
+    print(row)
+
+connection.close()
