@@ -1,0 +1,22 @@
+import sqlite3
+connection=sqlite3.connect("students.db")
+cursor=connection.cursor()
+cursor.execute("""create table if not exists students (id integer primary key,name text,grade integer)""")
+cursor.execute("Delete from students")
+cursor.execute("insert into students values(1,'Alice',9)")
+cursor.execute("insert into students values(2,'Bob',8)")
+cursor.execute("insert into students values(3,'Charlie',5)")
+cursor.execute("insert into students values(4,'David',7)")
+cursor.execute("insert into students values(5,'Eve',6)")
+cursor.execute("insert into students values(6,'Frank',9)")
+cursor.execute("insert into students values(7,'Grace',8)")
+cursor.execute("insert into students values(8,'Helen',7)")
+cursor.execute("insert into students values(9,'Ivy',6)")
+cursor.execute("insert into students values(10,'Jack',5)")
+connection.commit()
+cursor.execute("select * from students")
+rows=cursor.fetchall()
+print("STUDENT RECORDS:")
+for row in rows:
+    print(row)
+connection.close
